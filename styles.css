@@ -21,11 +21,6 @@ h1 {
   color: #1a1536;
 }
 
-#dice {
-  position: relative;
-  top: 25vh;
-}
-
 .dice {
   display: inline-block;
   font-size: 6rem;
