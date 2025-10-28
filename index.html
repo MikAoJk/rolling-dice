@@ -2,18 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rolling Dice</title>
+  <title>Roll a Dice – Random Dice Roller</title>
+  <meta name="description" content="Press the button to roll a virtual six‑sided die and instantly see the result.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
+  <header class="site-header">
     <h1>Rolling Dice 🎲</h1>
-    <div id="dice" class="dice">
-      <img id="diceImg" src="images/dice1.png" alt="Dice" width="100" height="100">
-    </div>
-    <button id="rollBtn">Roll Dice</button>
-  </div>
-  <script src="script.js"></script>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="dice-heading">
+      <h2 id="dice-heading" class="visually-hidden">Dice Roller</h2>
+
+      <figure id="dice" class="dice" data-face="1">
+        <img id="diceImg"
+             src="images/dice1.png"
+             alt="Dice face showing 1"
+             width="120"
+             height="120"
+             loading="eager"
+             decoding="async"
+             sizes="(max-width: 400px) 100px, 120px">
+        <figcaption id="diceResult" aria-live="polite">
+          Result: 1
+        </figcaption>
+      </figure>
+
+      <div class="controls">
+        <button id="rollBtn" type="button" aria-describedby="diceResult">
+          Roll Dice
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <noscript>
+    <p style="text-align:center;color:#b00;">
+      JavaScript is required to roll the dice. Please enable it in your browser.
+    </p>
+  </noscript>
+
+  <footer class="site-footer">
+    <p>
+      Built by <a href="https://github.com/MikAoJk">MikAoJk</a>. Code available on
+      <a href="https://github.com/MikAoJk/rolling-dice">GitHub</a>.
+    </p>
+  </footer>
+  
+  <script src="script.js" defer></script>
 </body>
 </html>
